@@ -1,0 +1,10 @@
+{{ template "base.html" }}
+<body>
+    <h1>Hello Word</h1>
+    <h2 hx-get="/ping" hx-trigger="load" hx-target="#hello">Ping Status live</h2>
+    <p id="hello"></p>
+
+    <div>
+        <div hx-target="this" hx-trigger="load" hx-get="/contact"></div>
+    </div>
+</body>

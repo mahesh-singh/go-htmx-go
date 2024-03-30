@@ -1,0 +1,16 @@
+version: "3.8"
+
+networks:
+  gohtmx:
+    name: gohtmx
+
+services:
+  web:
+    build: .
+    ports:
+      - 2468:2468
+    networks:
+      - gohtmx
+    volumes:
+      - .:/usr/src/app
+    command: air
